@@ -106,7 +106,7 @@ function prioritySort(jsonProp, sortPriority, options) {
 }
 
 /**
- * A check if the OpenAPI operation item matches a target definition .
+ * A check if the OpenAPI operation item matches a target definition.
  * @param {object} operationPath the OpenAPI path item to match
  * @param {object} operationMethod the OpenAPI method item to match
  * @param {string} target the entered operation definition that is a combination of the method & path, like GET::/lists

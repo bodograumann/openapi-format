@@ -68,6 +68,12 @@ async function openapiSort(oaObj, options) {
       if (this.path[0] === 'components' && this.path[1] === 'examples' && this.path[3] === 'value') {
           // debugStep = 'Generic sorting - skip nested components>examples'
           // Skip nested components>examples values
+
+      } else if (this.parent && this.parent.isRoot && this.key == 'paths') {
+        // Paths sorting by alphabet
+        // debugStep = 'Generic sorting - paths';
+        this.update(prioritySort(node, sortSet[this.key]));
+
       } else {
         // debugStep = 'Generic sorting - properties'
         // Sort list of properties

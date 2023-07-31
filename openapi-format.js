@@ -87,7 +87,7 @@ async function openapiSort(oaObj, options) {
   });
 
   // Process root level
-  if (jsonObj.openapi) {
+  if (jsonObj.openapi || jsonObj.swagger) {
     jsonObj = prioritySort(jsonObj, sortSet['root'])
   }
 
